@@ -11,7 +11,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v7
       - name: setup python
-        uses: actions/python-setup@v7
+        uses: actions/setup-python@v7
         with: 
               python-version: "3.12"
       - name: install dependencies
