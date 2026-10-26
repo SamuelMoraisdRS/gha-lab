@@ -1,0 +1,12 @@
+name: gha-lab
+on:
+  push: 
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ola:
+    runs-on: ubuntu-latest
+    steps:
+      - run:  
+          echo "OI. Rodo $RUNNER_OS"
