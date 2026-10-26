@@ -1,7 +1,7 @@
 name: events
 on:
   workflow_dispatch:
-    input:
+    inputs:
       nome:
         description: "Qual o seu nome?"
         required: true
