@@ -15,6 +15,6 @@ jobs:
         with: 
               python-version: "3.12"
       - name: install dependencies
-        run: pip install requirements-dev.txt
+        run: pip install -r requirements-dev.txt
       - name: test
         run: pytest -v
