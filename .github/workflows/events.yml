@@ -6,10 +6,10 @@ on:
         description: "Qual o seu nome?"
         required: true
         default: "Aluno"
-push:
-  paths: ["src/**"]
-schedule:
-  - cron : "*/5 * * * *"
+  push:
+    paths: ["src/**"]
+  schedule:
+    - cron : "*/5 * * * *"
   
 jobs:
   cumprimentar:
