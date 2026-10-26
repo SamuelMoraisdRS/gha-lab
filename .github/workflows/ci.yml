@@ -1,0 +1,20 @@
+name: CI 
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  integration:
+    runs-on : ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v7
+      - name: setup python
+        uses: actions/python-setup@v7
+        with: 
+              python-version: "3.12"
+      - name: install dependencies
+        run: pip install requirements-dev.txt
+      - name: test
+        run: pytest -v
