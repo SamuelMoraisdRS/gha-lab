@@ -8,8 +8,8 @@ on:
         default: "Aluno"
   push:
     paths: ["src/**"]
-  schedule:
-    - cron : "*/5 * * * *"
+  # schedule:
+    # - cron : "*/5 * * * *"
   
 jobs:
   cumprimentar:
