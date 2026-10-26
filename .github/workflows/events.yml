@@ -1,0 +1,20 @@
+name: events
+on:
+  workflow_dispatch:
+    input:
+      nome:
+        description: "Qual o seu nome?"
+        required: true
+        default: "Aluno"
+push:
+  paths: ["src/**"]
+schedule:
+  - cron : "*/5 * * * *"
+  
+jobs:
+  cumprimentar:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          NOME: ${{ inputs.nome || 'agendamento' }}
+        run: echo "Olá, $NOME ($GITHUB_EVENT_NAME)"
