@@ -10,6 +10,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Ola
-            run: echo "Ola ${{github.actor}}, rodando em ${{runner.os}}."
+            run: |
+              echo "Ola ${{github.actor}}, o runner roda ${{runner.os}}."
+            run: |
+              echo "Versao do Python:"
+              python --version
 
 
